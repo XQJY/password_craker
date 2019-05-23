@@ -26,5 +26,3 @@ mkbin:
 import:
 	cp -p proj-2_common_passwords.txt $(BIN_DIR)/proj-2_common_passwords.txt
 	cp -p dh.c $(BIN_DIR)/dh.c
-	cp -p pwd6sha256 $(BIN_DIR)/pwd6sha256
-	cp -p pwd4sha256 $(BIN_DIR)/pwd4sha256
