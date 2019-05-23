@@ -2,13 +2,13 @@ BIN_DIR = bin
 CC = gcc
 CFLAGS = -std=gnu99 -Wall -Wpedantic
 
-all: mkbin import dh guess
+all: mkbin import dh crack
 
 dh: dh.c
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $<
 
-guess: guess.c proj-2_sha256.o
-	$(CC) $(CFLAGS) guess.c $(BIN_DIR)/proj-2_sha256.o -o $(BIN_DIR)/$@ 
+crack: crack.c proj-2_sha256.o
+	$(CC) $(CFLAGS) crack.c $(BIN_DIR)/proj-2_sha256.o -o $(BIN_DIR)/$@ 
  
 %.o: %.c %.h
 	$(CC) $(CFLAGS) -c -o $(BIN_DIR)/$@ $<
